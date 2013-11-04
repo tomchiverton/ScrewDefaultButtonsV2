@@ -38,6 +38,8 @@
 				$this.wrap('<div >').css({'display': 'none'});
 
 				var buttonClass = $this.attr('class');
+				//remove any Validation Engine hints
+				buttonClass=buttonClass.replace(/validate\[minCheckbox\[[0-9+]\]\]/,'');
 				var buttonClick = $this.attr('onclick');
 
 				var $thisParent = $this.parent('div');
